@@ -87,7 +87,7 @@ Collection.create([
     {artist_id: 6,
     genre_id: 6,
     album_id: 6,
-    song_id: 6
+    song_id: 6},
 
 
     {artist_id: 7,
