@@ -57,67 +57,61 @@ Song.create([
     {name: "Salsa"}
 ])
 
-Collection.create(
-    [
-    {artist_id: 1},
-    {genre_id: 1},
-    {album_id: 1},
-    {song_id: 1}
-],
-[
-    {artist_id: 2},
-    {genre_id: 2},
-    {album_id: 2},
-    {song_id: 2}
-],
-[
-    {artist_id: 3},
-    {genre_id: 3},
-    {album_id: 3},
-    {song_id: 3}
-],
-[
-    {artist_id: 4},
-    {genre_id: 4},
-    {album_id: 4},
-    {song_id: 4}
-],
-[
-    {artist_id: 5},
-    {genre_id: 5},
-    {album_id: 5},
-    {song_id: 5}
-],
-[
-    {artist_id: 6},
-    {genre_id: 6},
-    {album_id: 6},
-    {song_id: 6}
-],
-[
-    {artist_id: 7},
-    {genre_id: 7},
-    {album_id: 7},
-    {song_id: 7}
-],
-[
-    {artist_id: 8},
-    {genre_id: 8},
-    {album_id: 8},
-    {song_id: 8}
-],
-[
-    {artist_id: 9},
-    {genre_id: 9},
-    {album_id: 9},
-    {song_id: 9}
-],
-[
-    {artist_id: 10},
-    {genre_id: 10},
-    {album_id: 10},
-    {song_id: 10}
-]
-)
+Collection.create([
+    
+   {artist_id: 1,
+    genre_id: 1,
+    album_id: 1,
+    song_id: 1},
+
+   {artist_id: 2,
+    genre_id: 2,
+    album_id: 2,
+    song_id: 2},
+
+   {artist_id: 3,
+    genre_id: 3,
+    album_id: 3,
+    song_id: 3},
+
+   {artist_id: 4,
+    genre_id: 4,
+    album_id: 4,
+    song_id: 4},
+
+   {artist_id: 5,
+    genre_id: 5,
+    album_id: 5,
+    song_id: 5},
+
+    {artist_id: 6,
+    genre_id: 6,
+    album_id: 6,
+    song_id: 6
+
+
+    {artist_id: 7,
+    genre_id: 7,
+    album_id: 7,
+    song_id: 7},
+
+
+    {artist_id: 8,
+    genre_id: 8,
+    album_id: 8,
+    song_id: 8},
+
+
+    {artist_id: 9,
+    genre_id: 9,
+    album_id: 9,
+    song_id: 9},
+
+    {artist_id: 10,
+    genre_id: 10,
+    album_id: 10,
+    song_id: 10},
+])
+
 
 p "Seeded database"
