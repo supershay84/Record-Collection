@@ -1615,3 +1615,257 @@ Completed 200 OK in 220ms (Views: 0.1ms | ActiveRecord: 39.2ms | Allocations: 75
   [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4960574172952141065)[0m
   [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/albums" for ::1 at 2021-01-20 16:50:24 -0500
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AlbumsController#index as HTML
+  [1m[36mAlbum Load (0.9ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mArtist Load (1.1ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 1]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.7ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 1]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mSong Load (0.5ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 1]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 2]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.4ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 2]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 2]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 3]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.4ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 3]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 3]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 4]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.4ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 4]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 4]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 5]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.4ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 5]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mSong Load (2.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 5]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 6]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.4ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 6]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mSong Load (0.6ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 6]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 7]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.3ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 7]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 7]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 8]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 8]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 8]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 9]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mGenre Load (2.4ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 9]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 9]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 10]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 10]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 10]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 11]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 11]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 11]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 12]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 12]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 12]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 13]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 13]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 13]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 14]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 14]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 14]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 15]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 15]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 15]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 16]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mGenre Load (1.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 16]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 16]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 17]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.4ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 17]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 17]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 18]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 18]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 18]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 19]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 19]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 19]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 20]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 20]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 20]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+Completed 200 OK in 279ms (Views: 0.1ms | ActiveRecord: 46.5ms | Allocations: 82268)
+
+
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (1.6ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Rock"], ["created_at", "2021-01-20 21:52:05.941167"], ["updated_at", "2021-01-20 21:52:05.941167"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.3ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Punk"], ["created_at", "2021-01-20 21:52:05.946875"], ["updated_at", "2021-01-20 21:52:05.946875"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.3ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Hip Hop"], ["created_at", "2021-01-20 21:52:05.949553"], ["updated_at", "2021-01-20 21:52:05.949553"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.4ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Rap"], ["created_at", "2021-01-20 21:52:05.952761"], ["updated_at", "2021-01-20 21:52:05.952761"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.3ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Alternative"], ["created_at", "2021-01-20 21:52:05.956100"], ["updated_at", "2021-01-20 21:52:05.956100"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.3ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Emo"], ["created_at", "2021-01-20 21:52:05.958904"], ["updated_at", "2021-01-20 21:52:05.958904"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.3ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Pop"], ["created_at", "2021-01-20 21:52:05.961982"], ["updated_at", "2021-01-20 21:52:05.961982"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.3ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "R&B"], ["created_at", "2021-01-20 21:52:05.967329"], ["updated_at", "2021-01-20 21:52:05.967329"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.3ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Neo Soul"], ["created_at", "2021-01-20 21:52:05.973507"], ["updated_at", "2021-01-20 21:52:05.973507"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.3ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Alternative Rap"], ["created_at", "2021-01-20 21:52:05.979222"], ["updated_at", "2021-01-20 21:52:05.979222"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtist Create (1.3ms)[0m  [1m[32mINSERT INTO "artists" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Chon"], ["created_at", "2021-01-20 21:52:06.000594"], ["updated_at", "2021-01-20 21:52:06.000594"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtist Create (0.3ms)[0m  [1m[32mINSERT INTO "artists" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Diarrhea Planet"], ["created_at", "2021-01-20 21:52:06.007497"], ["updated_at", "2021-01-20 21:52:06.007497"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtist Create (0.3ms)[0m  [1m[32mINSERT INTO "artists" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Kanye West"], ["created_at", "2021-01-20 21:52:06.013429"], ["updated_at", "2021-01-20 21:52:06.013429"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtist Create (0.3ms)[0m  [1m[32mINSERT INTO "artists" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "MF Doom"], ["created_at", "2021-01-20 21:52:06.017982"], ["updated_at", "2021-01-20 21:52:06.017982"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtist Create (0.3ms)[0m  [1m[32mINSERT INTO "artists" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "The Gaslight Anthem"], ["created_at", "2021-01-20 21:52:06.024726"], ["updated_at", "2021-01-20 21:52:06.024726"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtist Create (0.3ms)[0m  [1m[32mINSERT INTO "artists" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Taking Back Sunday"], ["created_at", "2021-01-20 21:52:06.038695"], ["updated_at", "2021-01-20 21:52:06.038695"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtist Create (0.3ms)[0m  [1m[32mINSERT INTO "artists" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Billie Eilish"], ["created_at", "2021-01-20 21:52:06.041645"], ["updated_at", "2021-01-20 21:52:06.041645"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtist Create (0.3ms)[0m  [1m[32mINSERT INTO "artists" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Nathaniel Rateliff & The Night Sweats"], ["created_at", "2021-01-20 21:52:06.045252"], ["updated_at", "2021-01-20 21:52:06.045252"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtist Create (0.4ms)[0m  [1m[32mINSERT INTO "artists" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Summer Walker"], ["created_at", "2021-01-20 21:52:06.048949"], ["updated_at", "2021-01-20 21:52:06.048949"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtist Create (0.3ms)[0m  [1m[32mINSERT INTO "artists" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Nina Dioz"], ["created_at", "2021-01-20 21:52:06.052960"], ["updated_at", "2021-01-20 21:52:06.052960"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAlbum Create (0.9ms)[0m  [1m[32mINSERT INTO "albums" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Grow"], ["created_at", "2021-01-20 21:52:06.066220"], ["updated_at", "2021-01-20 21:52:06.066220"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAlbum Create (0.3ms)[0m  [1m[32mINSERT INTO "albums" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Aloha"], ["created_at", "2021-01-20 21:52:06.070182"], ["updated_at", "2021-01-20 21:52:06.070182"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAlbum Create (0.3ms)[0m  [1m[32mINSERT INTO "albums" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "The College Dropout"], ["created_at", "2021-01-20 21:52:06.073017"], ["updated_at", "2021-01-20 21:52:06.073017"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAlbum Create (0.3ms)[0m  [1m[32mINSERT INTO "albums" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Doomsday"], ["created_at", "2021-01-20 21:52:06.076432"], ["updated_at", "2021-01-20 21:52:06.076432"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAlbum Create (0.4ms)[0m  [1m[32mINSERT INTO "albums" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "59 Sound"], ["created_at", "2021-01-20 21:52:06.079244"], ["updated_at", "2021-01-20 21:52:06.079244"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAlbum Create (0.3ms)[0m  [1m[32mINSERT INTO "albums" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Louder Now"], ["created_at", "2021-01-20 21:52:06.082535"], ["updated_at", "2021-01-20 21:52:06.082535"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAlbum Create (0.3ms)[0m  [1m[32mINSERT INTO "albums" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "When We Fall Asleep,Where Do We Go"], ["created_at", "2021-01-20 21:52:06.085725"], ["updated_at", "2021-01-20 21:52:06.085725"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAlbum Create (0.2ms)[0m  [1m[32mINSERT INTO "albums" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Nathaniel Rateliff & The Night Sweats"], ["created_at", "2021-01-20 21:52:06.088429"], ["updated_at", "2021-01-20 21:52:06.088429"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAlbum Create (0.2ms)[0m  [1m[32mINSERT INTO "albums" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Over It"], ["created_at", "2021-01-20 21:52:06.091202"], ["updated_at", "2021-01-20 21:52:06.091202"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAlbum Create (0.3ms)[0m  [1m[32mINSERT INTO "albums" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Reyna"], ["created_at", "2021-01-20 21:52:06.094064"], ["updated_at", "2021-01-20 21:52:06.094064"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.5ms)[0m  [1m[32mINSERT INTO "songs" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Can't Wait"], ["created_at", "2021-01-20 21:52:06.115271"], ["updated_at", "2021-01-20 21:52:06.115271"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Ghost With a Boner"], ["created_at", "2021-01-20 21:52:06.118759"], ["updated_at", "2021-01-20 21:52:06.118759"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.2ms)[0m  [1m[32mINSERT INTO "songs" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "All Falls Down"], ["created_at", "2021-01-20 21:52:06.121508"], ["updated_at", "2021-01-20 21:52:06.121508"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Gas Drawls"], ["created_at", "2021-01-20 21:52:06.124066"], ["updated_at", "2021-01-20 21:52:06.124066"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Great Expectation"], ["created_at", "2021-01-20 21:52:06.126952"], ["updated_at", "2021-01-20 21:52:06.126952"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "MakeDamnSure"], ["created_at", "2021-01-20 21:52:06.129870"], ["updated_at", "2021-01-20 21:52:06.129870"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Bad Guy"], ["created_at", "2021-01-20 21:52:06.132706"], ["updated_at", "2021-01-20 21:52:06.132706"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "S.O.B."], ["created_at", "2021-01-20 21:52:06.135894"], ["updated_at", "2021-01-20 21:52:06.135894"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Come Thru"], ["created_at", "2021-01-20 21:52:06.138821"], ["updated_at", "2021-01-20 21:52:06.138821"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Salsa"], ["created_at", "2021-01-20 21:52:06.141622"], ["updated_at", "2021-01-20 21:52:06.141622"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4960574172952141065)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4960574172952141065)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
