@@ -1221,3 +1221,397 @@ Completed 200 OK in 176ms (Views: 0.2ms | ActiveRecord: 37.0ms | Allocations: 59
   [1m[36mActiveRecord::InternalMetadata Load (3.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4960574172952141065)[0m
   [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/artists" for ::1 at 2021-01-20 16:41:39 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArtistsController#index as HTML
+  [1m[36mArtist Load (1.9ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mAlbum Load (3.5ms)[0m  [1m[34mSELECT "albums".* FROM "albums" INNER JOIN "collections" ON "albums"."id" = "collections"."album_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 1]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.7ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 1]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mSong Load (0.9ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 1]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mAlbum Load (1.9ms)[0m  [1m[34mSELECT "albums".* FROM "albums" INNER JOIN "collections" ON "albums"."id" = "collections"."album_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 2]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.7ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 2]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mSong Load (0.5ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 2]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mAlbum Load (0.5ms)[0m  [1m[34mSELECT "albums".* FROM "albums" INNER JOIN "collections" ON "albums"."id" = "collections"."album_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 3]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.4ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 3]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mSong Load (0.7ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 3]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mAlbum Load (0.4ms)[0m  [1m[34mSELECT "albums".* FROM "albums" INNER JOIN "collections" ON "albums"."id" = "collections"."album_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 4]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.3ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 4]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mSong Load (0.6ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 4]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mAlbum Load (0.4ms)[0m  [1m[34mSELECT "albums".* FROM "albums" INNER JOIN "collections" ON "albums"."id" = "collections"."album_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 5]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.5ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 5]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 5]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mAlbum Load (0.4ms)[0m  [1m[34mSELECT "albums".* FROM "albums" INNER JOIN "collections" ON "albums"."id" = "collections"."album_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 6]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.4ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 6]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mSong Load (0.5ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 6]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mAlbum Load (0.3ms)[0m  [1m[34mSELECT "albums".* FROM "albums" INNER JOIN "collections" ON "albums"."id" = "collections"."album_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 7]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mGenre Load (1.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 7]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 7]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" INNER JOIN "collections" ON "albums"."id" = "collections"."album_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 8]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 8]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 8]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" INNER JOIN "collections" ON "albums"."id" = "collections"."album_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 9]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.3ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 9]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 9]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mAlbum Load (0.3ms)[0m  [1m[34mSELECT "albums".* FROM "albums" INNER JOIN "collections" ON "albums"."id" = "collections"."album_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 10]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 10]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 10]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mAlbum Load (0.3ms)[0m  [1m[34mSELECT "albums".* FROM "albums" INNER JOIN "collections" ON "albums"."id" = "collections"."album_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 11]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.3ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 11]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 11]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" INNER JOIN "collections" ON "albums"."id" = "collections"."album_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 12]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 12]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mSong Load (0.7ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 12]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mAlbum Load (0.3ms)[0m  [1m[34mSELECT "albums".* FROM "albums" INNER JOIN "collections" ON "albums"."id" = "collections"."album_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 13]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 13]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 13]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" INNER JOIN "collections" ON "albums"."id" = "collections"."album_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 14]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 14]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 14]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" INNER JOIN "collections" ON "albums"."id" = "collections"."album_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 15]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.3ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 15]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 15]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" INNER JOIN "collections" ON "albums"."id" = "collections"."album_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 16]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 16]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 16]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mAlbum Load (0.3ms)[0m  [1m[34mSELECT "albums".* FROM "albums" INNER JOIN "collections" ON "albums"."id" = "collections"."album_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 17]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.5ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 17]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 17]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" INNER JOIN "collections" ON "albums"."id" = "collections"."album_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 18]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 18]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 18]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" INNER JOIN "collections" ON "albums"."id" = "collections"."album_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 19]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.6ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 19]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mSong Load (1.0ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 19]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" INNER JOIN "collections" ON "albums"."id" = "collections"."album_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 20]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 20]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."artist_id" = $1[0m  [["artist_id", 20]]
+  ↳ app/controllers/artists_controller.rb:8:in `index'
+Completed 200 OK in 278ms (Views: 0.1ms | ActiveRecord: 49.3ms | Allocations: 82244)
+
+
+Started GET "/songs" for ::1 at 2021-01-20 16:41:57 -0500
+Processing by SongsController#index as HTML
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mAlbum Load (0.7ms)[0m  [1m[34mSELECT "albums".* FROM "albums" INNER JOIN "collections" ON "albums"."id" = "collections"."album_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 1]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.6ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 1]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mGenre Load (1.4ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 1]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mAlbum Load (0.5ms)[0m  [1m[34mSELECT "albums".* FROM "albums" INNER JOIN "collections" ON "albums"."id" = "collections"."album_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 2]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.6ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 2]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.5ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 2]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mAlbum Load (0.4ms)[0m  [1m[34mSELECT "albums".* FROM "albums" INNER JOIN "collections" ON "albums"."id" = "collections"."album_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 3]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.8ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 3]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.5ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 3]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mAlbum Load (0.6ms)[0m  [1m[34mSELECT "albums".* FROM "albums" INNER JOIN "collections" ON "albums"."id" = "collections"."album_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 4]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 4]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.4ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 4]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mAlbum Load (0.6ms)[0m  [1m[34mSELECT "albums".* FROM "albums" INNER JOIN "collections" ON "albums"."id" = "collections"."album_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 5]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 5]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.4ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 5]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mAlbum Load (0.5ms)[0m  [1m[34mSELECT "albums".* FROM "albums" INNER JOIN "collections" ON "albums"."id" = "collections"."album_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 6]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 6]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.5ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 6]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mAlbum Load (0.4ms)[0m  [1m[34mSELECT "albums".* FROM "albums" INNER JOIN "collections" ON "albums"."id" = "collections"."album_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 7]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 7]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.3ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 7]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mAlbum Load (0.3ms)[0m  [1m[34mSELECT "albums".* FROM "albums" INNER JOIN "collections" ON "albums"."id" = "collections"."album_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 8]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 8]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 8]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" INNER JOIN "collections" ON "albums"."id" = "collections"."album_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 9]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 9]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.4ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 9]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" INNER JOIN "collections" ON "albums"."id" = "collections"."album_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 10]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 10]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.3ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 10]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mAlbum Load (0.3ms)[0m  [1m[34mSELECT "albums".* FROM "albums" INNER JOIN "collections" ON "albums"."id" = "collections"."album_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 11]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 11]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 11]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" INNER JOIN "collections" ON "albums"."id" = "collections"."album_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 12]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 12]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.7ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 12]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" INNER JOIN "collections" ON "albums"."id" = "collections"."album_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 13]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 13]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.3ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 13]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" INNER JOIN "collections" ON "albums"."id" = "collections"."album_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 14]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 14]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 14]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" INNER JOIN "collections" ON "albums"."id" = "collections"."album_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 15]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 15]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 15]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" INNER JOIN "collections" ON "albums"."id" = "collections"."album_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 16]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 16]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 16]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mAlbum Load (0.3ms)[0m  [1m[34mSELECT "albums".* FROM "albums" INNER JOIN "collections" ON "albums"."id" = "collections"."album_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 17]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 17]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 17]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mAlbum Load (0.3ms)[0m  [1m[34mSELECT "albums".* FROM "albums" INNER JOIN "collections" ON "albums"."id" = "collections"."album_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 18]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 18]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.3ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 18]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mAlbum Load (0.5ms)[0m  [1m[34mSELECT "albums".* FROM "albums" INNER JOIN "collections" ON "albums"."id" = "collections"."album_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 19]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 19]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.3ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 19]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mAlbum Load (0.7ms)[0m  [1m[34mSELECT "albums".* FROM "albums" INNER JOIN "collections" ON "albums"."id" = "collections"."album_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 20]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mArtist Load (3.7ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 20]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."song_id" = $1[0m  [["song_id", 20]]
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+Completed 200 OK in 197ms (Views: 0.1ms | ActiveRecord: 26.5ms | Allocations: 55213)
+
+
+Started GET "/albums" for ::1 at 2021-01-20 16:42:20 -0500
+Processing by AlbumsController#index as HTML
+  [1m[36mAlbum Load (0.6ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.6ms | Allocations: 2482)
+
+
+Started GET "/albums" for ::1 at 2021-01-20 16:44:16 -0500
+Processing by AlbumsController#index as HTML
+  [1m[36mAlbum Load (0.3ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 1]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.8ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 1]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 1]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mArtist Load (1.6ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 2]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.4ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 2]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mSong Load (0.5ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 2]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 3]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.5ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 3]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mSong Load (0.5ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 3]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 4]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.3ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 4]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mSong Load (0.5ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 4]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 5]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.4ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 5]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mSong Load (0.6ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 5]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 6]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.3ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 6]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 6]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 7]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mGenre Load (1.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 7]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 7]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 8]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 8]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 8]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 9]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 9]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 9]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 10]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.3ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 10]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 10]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 11]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 11]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 11]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 12]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 12]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 12]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 13]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 13]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 13]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 14]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 14]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mSong Load (0.8ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 14]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 15]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.3ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 15]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 15]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 16]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 16]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 16]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 17]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 17]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 17]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 18]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 18]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 18]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 19]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 19]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 19]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" INNER JOIN "collections" ON "artists"."id" = "collections"."artist_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 20]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "collections" ON "genres"."id" = "collections"."genre_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 20]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs" INNER JOIN "collections" ON "songs"."id" = "collections"."song_id" WHERE "collections"."album_id" = $1[0m  [["album_id", 20]]
+  ↳ app/controllers/albums_controller.rb:8:in `index'
+Completed 200 OK in 220ms (Views: 0.1ms | ActiveRecord: 39.2ms | Allocations: 75557)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4960574172952141065)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4960574172952141065)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
