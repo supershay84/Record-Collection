@@ -1,7 +1,7 @@
 class GenresController < ApplicationController
+  validates :name, uniqueness: true
   before_action :set_genre, only: [:show, :update, :destroy]
 
-  # validates :name, uniqueness: true
   # GET /genres
   def index
     @genres = Genre.all
