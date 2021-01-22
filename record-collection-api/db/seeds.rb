@@ -32,16 +32,26 @@ Artist.create([
 ])
 
 Album.create([
-    {name: "Grow"},
-    {name: "Aloha"},
-    {name: "The College Dropout"},
-    {name: "Doomsday"},
-    {name: "59 Sound"},
-    {name: "Louder Now"},
-    {name: "When We Fall Asleep,Where Do We Go"},
-    {name: "Nathaniel Rateliff & The Night Sweats"},
-    {name: "Over It"},
-    {name: "Reyna"}
+    {name: "Grow",
+    image: ""},
+    {name: "Aloha",
+    image: ""},
+    {name: "The College Dropout",
+    image: ""},
+    {name: "Doomsday",
+    image: ""},
+    {name: "59 Sound",
+    image: ""},
+    {name: "Louder Now",
+    image: ""},
+    {name: "When We Fall Asleep,Where Do We Go",
+    image: ""},
+    {name: "Nathaniel Rateliff & The Night Sweats",
+    image: ""},
+    {name: "Over It",
+    image: ""},
+    {name: "Reyna",
+    image: ""}
 ])
 
 Song.create([
